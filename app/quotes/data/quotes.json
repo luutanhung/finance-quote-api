@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "quote": "If you would be wealthy, think of saving as well as getting.",
+        "author": "Benjamin Franklin",
+        "author_avatar_url": "https://www.shutterstock.com/image-illustration/benjamin-franklin-digital-oil-painting-600nw-2214535093.jpg",
+        "type": "inspiration"
+    },
+    {
+        "id": 2,
+        "quote": "Do not save what is left after spending; instead spend what is left after saving.",
+        "author": "Warrent Buffett",
+        "author_avatar_url": "https://cafefcdn.com/thumb_w/640/203337114487263232/2023/8/19/avatar1692406262032-16924062632421696732083.png",
+        "type": "inspiration"
+    },
+    {
+        "id": 3,
+        "quote": "I can understand wanting to have millions of dollars, there’s a certain freedom, meaningful freedom that comes with that. But once you get much beyond that, I have to tell you, it’s the same hamburger.",
+        "author": "Bill Gates",
+        "author_avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCNQD1uEyyUbtJxMdpneAHTM2XflvSZ6KPylf1PYP4L33NTxwnRDZsk4TxjKtmb2EELZ8&usqp=CAU",
+        "type": "inspiration"
+    },
+    {
+        "id": 4,
+        "quote": "Make savings a monthly expense",
+        "type": "practical"
+    },
+    {
+        "id": 5,
+        "quote": "Economize on wants",
+        "type": "practical"
+    },
+    {
+        "id": 6,
+        "quote": "Use goals to make saving meaningful",
+        "type": "practical"
+    }
+]
