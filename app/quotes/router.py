@@ -1,6 +1,6 @@
 from typing import Optional
 
-from fastapi import APIRouter, Depends, Response, Query
+from fastapi import APIRouter, Request, Depends, Response, Query
 
 from .types import QuoteType, QuoteResponseType
 from .schemas import Quote, QuoteRead
@@ -16,6 +16,7 @@ router = APIRouter(prefix="/api/quotes", tags=["Quote"])
 
 @router.get("/random")
 def get_random_quote(
+    request: Request,
     quote_type: Optional[QuoteType] = Query(None, description="Declare type of quote"),
     response_type: QuoteResponseType = Depends(get_quote_response_type),
     quote_provider: QuoteProvider = Depends(get_quote_provider),
@@ -54,6 +55,7 @@ def get_random_quote(
 
 @router.get("/{id}", response_model=QuoteRead)
 def get_quote_by_id(
+    request: Request,
     id: int,
     response_type: QuoteResponseType = Depends(get_quote_response_type),
     quote_provider: QuoteProvider = Depends(get_quote_provider),
