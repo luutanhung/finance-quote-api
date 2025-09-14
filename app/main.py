@@ -1,10 +1,12 @@
 from fastapi import FastAPI
 
-from app.quotes.router import router as quote_router
 from app.exceptions import NotFound, not_found_handler
+from app.routers import health_router
+from app.quotes.router import router as quote_router
 
 app = FastAPI()
 
 app.add_exception_handler(NotFound, not_found_handler)
 
+app.include_router(health_router)
 app.include_router(quote_router)
