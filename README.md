@@ -1,6 +1,6 @@
 <div align="center">
     <h2>Finance Quote API</h2>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhMEpbEVqhuQqr_zMiWOrud6AZOZTrUoQVlw&s" alt="Finance Quote API Avatar" width="50" height="50"/>
+    <img src="./assets/finance-quote-api-avatar.png" alt="Finance Quote API Avatar" width="75" height="75"/>
 </div>
 
 ## Overview
