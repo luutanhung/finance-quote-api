@@ -7,7 +7,7 @@ from .schemas import Quote, QuoteRead
 from .dependencies import get_quote_provider, get_svg_converter, get_quote_response_type
 from .services import QuoteProvider, SVGConverter
 
-router = APIRouter(prefix="/quotes", tags=["Quote"])
+router = APIRouter(prefix="/api/quotes", tags=["Quote"])
 
 
 @router.get("/random")
