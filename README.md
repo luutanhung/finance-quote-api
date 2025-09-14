@@ -34,8 +34,15 @@ pip install -r requirements.txt
 fastapi run app/main.py
 ```
 
-The API will be available at `http://127.0.0.1:8000`.
-Otherwise, you can try [deployed version](https://finance-quote-api.onrender.com) on [render](https://render.com/).
+🐳 Run with Docker
+You can also download this [docker image](https://hub.docker.com/r/luutanhungdev/finance-quote-api), and run this application as a docker container.
+```bash
+docker pull luutanhungdev/finance-quote-api:latest
+docker run -d -p 8000:8000 luutanhungdev/finance-quote-api:latest
+```
+
+The API will be available at `http://0.0.0.0:8000`.
+Otherwise, you can try [my deployed version](https://finance-quote-api.onrender.com) on [render](https://render.com/).
 
 ### 📖 API Endpoints
 
@@ -66,8 +73,8 @@ GET /api/quotes/random
 - Query Parameters:
     - **quote_type** *(optional, string)* – Filter by type (e.g., `inspiration`, `pracmatical`).
     - **response_type** *(optional, string)* – Format of response:
-    - `json` *(default)*
-    - `svg`
+      - `json` *(default)*
+      - `svg`
     - **theme** *(optional, string)* – Color theme for SVG: `light` *(default)* or `dark`.
     - **width** *(optional, int)* – SVG width. Range: **400–600**.
     - **height** *(optional, int)* – SVG height. Range: **175–300**.
@@ -99,8 +106,8 @@ GET /api/quotes/{id}
 - Query Parameters:
     - **quote_type** *(optional, string)* – Filter by type (e.g., `inspiration`, `pracmatical`).
     - **response_type** *(optional, string)* – Format of response:
-    - `json` *(default)*
-    - `svg`
+      - `json` *(default)*
+      - `svg`
     - **theme** *(optional, string)* – Color theme for SVG: `light` *(default)* or `dark`.
     - **width** *(optional, int)* – SVG width. Range: **400–600**.
     - **height** *(optional, int)* – SVG height. Range: **175–300**.
