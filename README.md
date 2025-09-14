@@ -8,6 +8,7 @@ This project is a RESTful API built with FastAPI that provides access to a colle
 
 ## Table of Contents
 - [Features](#-features)
+- [Installation](#-installation)
 - [API Endpoints](#-api-endpoints)
 - [License](#-license)
 - [Author](#-author)
@@ -16,6 +17,24 @@ This project is a RESTful API built with FastAPI that provides access to a colle
 - Retrieve Random Quotes: Get a random quote from the entire collection or filter by type.
 - Fetch Specific Quotes: Access a quote directly using its unique ID.
 - Customizable SVG Output: Generate quotes as shareable SVG images. You can customize the theme, width, and height of the image via query parameters.
+
+### 🚀 Installation
+To set up the project locally, follow these steps.
+1. Clone the repository.
+```bash
+git clone https://github.com/luutanhung/finance-quote-api.git
+cd finance-quote-api
+```
+2. Install dependencies. It is recommended to use a virtual environment.
+```bash
+pip install -r requirements.txt
+```
+3. Run the application
+```bash
+fastapi run app/main.py
+```
+
+The API will be available at `http://127.0.0.1:8000`.
 
 ### 📖 API Endpoints
 
