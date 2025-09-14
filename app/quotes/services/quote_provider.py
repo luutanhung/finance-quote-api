@@ -6,10 +6,11 @@ import random
 
 from app.exceptions import NotFound
 
-from .schemas import Quote
+from ..types import QuoteType
+from ..schemas import Quote
 
 
-class QuoteService:
+class QuoteProvider:
     def __init__(self) -> None:
         current_dir = Path(__file__).parent
         file_path = current_dir / "data" / "quotes.json"
@@ -22,9 +23,9 @@ class QuoteService:
                 counter += 1
                 self.quotes.append(Quote(**q))
 
-    def get_random_quote(self, type: Optional[str] = None) -> Quote:
-        if type:
-            filtered_quotes = [q for q in self.quotes if q.type == type]
+    def get_random_quote(self, quote_type: Optional[QuoteType] = None) -> Quote:
+        if quote_type:
+            filtered_quotes = [q for q in self.quotes if q.type == quote_type]
             if not filtered_quotes:
                 raise NotFound()
             return random.choice(filtered_quotes)
