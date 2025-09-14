@@ -41,7 +41,9 @@ The API will be available at `http://127.0.0.1:8000`.
 #### Health Check
 The health check endpoint is a simple way to verify that the application is up and running.
 
-`GET /health`
+```http
+GET /health
+```
 
 - Description: Returns a `200 OK` status with a simple JSON payload.
 - Response:
@@ -55,7 +57,9 @@ The health check endpoint is a simple way to verify that the application is up a
 
 These endpoints are the core of the API, providing access to the quote collection.
 
-`GET /api/quotes/random`
+```http
+GET /api/quotes/random
+```
 
 - Description: Retrieves a random quote from the collection.
 - Query Parameters:
@@ -85,7 +89,9 @@ GET /api/quotes/random?response_type=svg&theme=dark&width=400&height=175
 ```
 ![Bill Gates's Quote](./assets/bill-gates-quote.svg)
 
-`GET /api/quotes/{id}`
+```http
+GET /api/quotes/{id}
+```
 - Description: Retrieves a specific quote by its unique ID.
 - Path Parameters:
     - **id** (int, required) - Unique ID of the quote
@@ -111,7 +117,7 @@ GET /api/quotes/1
 }
 ```
 - Example (SVG Response)
-```
+```http
 GET /api/quotes/1?response_type=svg&theme=dark&width=400&height=175
 ```
 ![Benjamin Franklin's Quote](./assets/benjamin-franklin-quote.svg)
