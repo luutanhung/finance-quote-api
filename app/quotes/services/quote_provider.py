@@ -12,7 +12,7 @@ from ..schemas import Quote
 
 class QuoteProvider:
     def __init__(self) -> None:
-        current_dir = Path(__file__).parent
+        current_dir = Path(__file__).parent.parent
         file_path = current_dir / "data" / "quotes.json"
         with open(file_path, "r") as f:
             data = json.load(f)
