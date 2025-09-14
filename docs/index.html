@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Quote API</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f9fafb;
+      color: #111827;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      color: #2563eb;
+    }
+    pre {
+      background: #1e293b;
+      color: #f1f5f9;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📜 Finance Quote API</h1>
+        <p>This API provides inspirational, programming, and philosophy quotes in JSON or SVG format.</p>
+
+        <h2>🔗 Endpoints</h2>
+        <ul>
+            <li><code>GET /health</code> - Verify the application is up and running</li>
+            <li><code>GET /api/quotes/random</code> – Retrieve a random quote</li>
+            <li><code>GET /api/quotes/{id}</code> – Retrieve a quote by ID</li>
+        </ul>
+
+        <h2>📖 Usage Examples</h2>
+        <pre>
+GET /health
+{
+  "status": "ok"
+}
+        </pre>
+        <pre>
+GET /api/quotes/random?response_type=json
+{
+    "id": 3,
+    "quote": "Once you get much beyond a certain freedom of having millions of dollars, I have to tell you, it’s the same hamburger.",
+    "author": "Bill Gates",
+    "author_avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCNQD1uEyyUbtJxMdpneAHTM2XflvSZ6KPylf1PYP4L33NTxwnRDZsk4TxjKtmb2EELZ8&usqp=CAU",
+    "type": "inspiration"
+}
+        </pre>
+        <pre>
+GET /api/quotes/random?response_type=svg&theme=dark&width=400&height=175
+</pre>
+        <img src="https://raw.githubusercontent.com/luutanhung/finance-quote-api/main/assets/bill-gates-quote.svg" alt="Bill Gates's Quote"/>
+
+        <p>👉 Check out the API on <a href="https://github.com/luutanhung/finance-quote-api">GitHub</a></p>
+    </div>
+</body>
+</html>
