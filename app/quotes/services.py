@@ -15,7 +15,12 @@ class QuoteService:
         file_path = current_dir / "data" / "quotes.json"
         with open(file_path, "r") as f:
             data = json.load(f)
-            self.quotes: list[Quote] = [Quote(**q) for q in data]
+            self.quotes: list[Quote] = []
+            counter: int = 1
+            for q in data:
+                q["id"] = counter
+                counter += 1
+                self.quotes.append(Quote(**q))
 
     def get_random_quote(self, type: Optional[str] = None) -> Quote:
         if type:
@@ -31,7 +36,6 @@ class QuoteService:
         for quote in self.quotes:
             if quote.id == id:
                 found_quote = quote
-        if found_quote:
-            return found_quote
-        else:
+        if not found_quote:
             raise NotFound()
+        return found_quote
