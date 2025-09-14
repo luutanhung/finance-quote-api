@@ -14,4 +14,5 @@ async def health_check():
         dict: A dictionary with the status of the API.
             Example: {"status": "ok"}
     """
+
     return {"status": "ok"}
