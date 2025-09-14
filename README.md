@@ -35,6 +35,7 @@ fastapi run app/main.py
 ```
 
 The API will be available at `http://127.0.0.1:8000`.
+Otherwise, you can try [deployed version](https://finance-quote-api.onrender.com) on [render](https://render.com/).
 
 ### 📖 API Endpoints
 
